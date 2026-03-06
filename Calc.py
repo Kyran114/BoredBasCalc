@@ -1,4 +1,5 @@
 import Calculator
+import time
 
 run = int(1)
 while run > 0:
@@ -16,6 +17,7 @@ while run > 0:
         operator = int(input())
         print("-------------------------------")
         print("Calculating...")
+        time.sleep(1)
         if operator == 1 :
             print(f"The result = {cal.add(var1, var2)}")
             pass
@@ -36,6 +38,7 @@ while run > 0:
             print("Error: ", e)
             continue
     try:
+        time.sleep(1)
         print("-------------------------------")
         print("Another Calculation ?")
         print("Please enter your choice as a number: ")
