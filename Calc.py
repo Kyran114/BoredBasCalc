@@ -1,12 +1,13 @@
 import Calculator
 import time
+from art import *
 
 run = int(1)
 while run > 0:
     try:
         cal =Calculator.Calculator()
         print("-------------------------------")
-        print("Welcome to the Calculator :)")
+        tprint("Calculator", font="doom  ")
         print("-------------------------------")
         var1 = int(input("Variable 1: "))
         var2 = int(input("Variable 2: "))
@@ -16,7 +17,7 @@ while run > 0:
         print("-------------------------------")
         operator = int(input())
         print("-------------------------------")
-        print("Calculating...")
+        tprint("Calculating...", font="doom  ")
         time.sleep(1)
         if operator == 1 :
             print(f"The result = {cal.add(var1, var2)}")
