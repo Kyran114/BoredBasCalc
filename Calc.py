@@ -15,26 +15,29 @@ while run > 0:
         print("Please enter: the desired operator choice as a number: ")
         print("1:Add  2:Sub  3:Mult  4:Div")
         print("-------------------------------")
-        operator = int(input())
+        operator = int(input("Your choice = "))
         print("-------------------------------")
-        tprint("Calculating...", font="doom  ")
-        time.sleep(1)
-        if operator == 1 :
-            print(f"The result = {cal.add(var1, var2)}")
-            pass
-        elif operator == 2:
-            print(f"The result = {cal.sub(var1, var2)}")
-            pass
-        elif operator == 3:
-            print(f"The result = {cal.mult(var1, var2)}")
-            pass
-        elif operator == 4:
-            print(f"The result = {cal.div(var1, var2)}")
-            pass
+
+        Operations = {1: "Addition", 2: "Subtraction", 3: "Multiplication", 4: "Division"}
+        if operator in Operations :
+            time.sleep(1)
+            tprint("Calculating...", font="doom  ")
+            match (operator):
+                case (1):
+                        print(f"The result = {cal.add(var1, var2)}")
+                        pass
+                case (2):
+                        print(f"The result = {cal.sub(var1, var2)}")
+                        pass
+                case (3):
+                        print(f"The result = {cal.mult(var1, var2)}")
+                        pass
+                case (4):
+                        print(f"The result = {cal.div(var1, var2)}")
+                        pass
         else:
-            print("Invalid Number, try again")
+            print("Invalid Selection, try again")
             continue
-            
     except Exception as e:
             print("Error: ", e)
             continue
@@ -60,6 +63,10 @@ while run > 0:
     except Exception as e:
         print("Invalid Operator")
         break
+    
+    if __name__ == "__main__":
+        main()
+    # end main
 
 
                 
