@@ -2,8 +2,8 @@ import Calculator
 import time
 from art import *
 
-run = int(1)
-while run > 0:
+run = True
+while run == True:
     try:
         cal =Calculator.Calculator()
         print("-------------------------------")
@@ -20,8 +20,8 @@ while run > 0:
 
         Operations = {1: "Addition", 2: "Subtraction", 3: "Multiplication", 4: "Division"}
         if operator in Operations :
-            time.sleep(1)
             tprint("Calculating...", font="doom  ")
+            time.sleep(1)
             match (operator):
                 case (1):
                         print(f"The result = {cal.add(var1, var2)}")
@@ -55,6 +55,7 @@ while run > 0:
             continue
         elif dec == 2:
             print("Good Bye")
+            run = False
             exit()
         else:
             print("Invalid Operator, try again")
