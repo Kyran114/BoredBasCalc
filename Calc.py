@@ -6,7 +6,7 @@ def run():
     run = True
     while run == True:
         try:
-            cal =Calculator.Calculator()
+            cal = Calculator.calculator()
             print("-------------------------------")
             tprint("Calculator", font="doom  ")
             print("-------------------------------")
